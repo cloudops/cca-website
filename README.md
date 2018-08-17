@@ -4,8 +4,6 @@ BUILD REQUIREMENTS
 Install Dependencies
 --------------------
 
-*~~Make sure you have `hugo` version `v.41` or higher~~*
-
 We're using `hugow` which will download specified Hugo binary defined in `.hugo/version`
 (currently: `v0.45.1`). If you need to use Hugo binary directly instead of `make` command,
 make sure to execute: `./hugow` instead of plain `hugo`.
@@ -18,6 +16,16 @@ Make sure `npm` is installed on your system.
 npm install less -g
 npm install uglifycss -g
 npm install uglify-js -g
+```
+
+*MacOS*
+```bash
+brew install fswatch
+```
+
+*Linux*
+```
+# ref: https://github.com/emcrisostomo/fswatch
 ```
 
 Build Project
@@ -42,6 +50,16 @@ make run
 Pass additional arguments to the `hugo` command by using the following format.
 ```
 make -- run --buildDrafts -b http://rebrand.cloud.ca
+```
+
+Watch For Changes
+-----------------
+
+Once you run `make run` you will want to have changes to the `less` and other files in the `static-src` folder to get rebuild.  In order to do this, we have a new `make watch` command.
+
+```bash
+# in a new terminal tab
+make watch
 ```
 
 Deploy Project

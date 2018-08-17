@@ -1,3 +1,6 @@
+# tmp build directory
+TMP_DIR = /tmp
+
 # LESS params
 LESS_DIR = ./static-src/less
 LESS_FILE = style.less
@@ -13,7 +16,7 @@ JS_SRC_FILE  = script.js
 JS_DEST_DIR  = ./static/js
 JS_DEST_FILE = script.min.js
 
-.PHONY: clean-css clean-js build build-css build-js
+.PHONY: clean-css clean-js prepare prepare-css prepare-js
 
 clean-css:
 	rm -f $(CSS_DIR)/$(CSS_FILE)
@@ -21,12 +24,12 @@ clean-css:
 clean-js:
 	rm -f $(JS_DEST_DIR)/$(JS_DEST_FILE)
 
-build: build-css build-js
+prepare: prepare-css prepare-js
 
-build-css: clean-css
-	lessc $(LESS_DIR)/$(LESS_FILE) > $(CSS_DIR)/$(CSS_TMP_FILE)
-	uglifycss $(CSS_DIR)/$(CSS_TMP_FILE) > $(CSS_DIR)/$(CSS_FILE)
-	rm -f $(CSS_DIR)/$(CSS_TMP_FILE)
+prepare-css: clean-css
+	lessc $(LESS_DIR)/$(LESS_FILE) > $(TMP_DIR)/$(CSS_TMP_FILE)
+	uglifycss $(TMP_DIR)/$(CSS_TMP_FILE) > $(CSS_DIR)/$(CSS_FILE)
+	rm -f $(TMP_DIR)/$(CSS_TMP_FILE)
 
-build-js: clean-js
+prepare-js: clean-js
 	uglifyjs $(JS_SRC_DIR)/$(JS_SRC_FILE) > $(JS_DEST_DIR)/$(JS_DEST_FILE)
