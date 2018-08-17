@@ -56,7 +56,7 @@ run: prepare
 
 watch:
 	# watch the static-src directory and prepare css and js on demand
-	fswatch -0 themes/cca-general/static-src/ | xargs -0 -n 1 -I {} make prepare
+	fswatch -0 themes/cca-general/static-src configs config.common.toml | xargs -0 -n 1 -I {} make prepare
 
 deploy:
 	swiftly -dir=public -identity=$(IDENTITY) -password=$(PASSWORD) -domain=$(DOMAIN)
