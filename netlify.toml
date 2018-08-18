@@ -1,0 +1,6 @@
+[build]
+  publish = "public"
+  command = "make build"
+
+[context.deploy-preview]
+  command = "make -- build --buildFuture --buildDrafts --baseURL $DEPLOY_PRIME_URL"

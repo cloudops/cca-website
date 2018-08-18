@@ -84,3 +84,6 @@ watch:
 
 deploy:
 	swiftly -dir=public -identity=$(IDENTITY) -password=$(PASSWORD) -domain=$(DOMAIN)
+
+%:
+	@:
