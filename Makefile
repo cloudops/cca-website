@@ -29,7 +29,7 @@ define clean_js
 	rm -f $(JS_DEST_DIR)/$(JS_DEST_FILE)
 endef
 
-prepare: prepare-css prepare-js prepare-conf prepare-themes
+prepare: prepare-themes prepare-css prepare-js prepare-conf
 
 prepare-css:
 	if [ -d "$(LESS_DIR)" ]; then \
@@ -70,7 +70,7 @@ watch:
 			configs \
 			config.common.toml \
 			themes/cca-general/resources \
-		| xargs -0 -n 1 -I {} make prepare; \
+		| xargs -0 -n 1 -I {} $(MAKE) prepare; \
 	else \
 		while true; do \
 			inotifywait --recursive -e modify,create,delete \
@@ -78,7 +78,7 @@ watch:
 				configs \
 				config.common.toml \
 				themes/cca-general/resources \
-			&& $(MAKE) build; \
+			&& $(MAKE) prepare; \
 		done \
 	fi
 
