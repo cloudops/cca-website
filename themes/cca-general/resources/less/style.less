@@ -533,8 +533,6 @@ margin-right: auto;
     background: -o-linear-gradient(#f5f7f1, #ccc);
     background: -moz-linear-gradient(#f5f7f1, #ccc);
     background: linear-gradient(#f5f7f1, #ccc);
-    position: relative;
-    z-index: 500;
 }
 
 #footer.footer.card-section {
@@ -589,7 +587,7 @@ margin-right: auto;
 @media screen and (max-width : 768px) {
 
     .footer .mobile-footer-settings {
-         display: block;
+        display: block;
         margin-top: 10px;
     }
 
@@ -813,6 +811,7 @@ margin-right: auto;
     background: linear-gradient(#ec1c23, #1d2671);
 
     color: #fff;
+    padding-bottom: 200px;
 }
 
 .services-card h3 {
@@ -995,9 +994,60 @@ a.btn.special-offers-services {
     border: none;
     border-radius: 0;
     background-color: rgba(249, 249, 249, 0.1);
-    color: rgba(249, 249, 249, 1)
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 18px;
+    height: 62px;
+}
+
+textarea#Form-Requirements.form-control {
+    height: 200px;
 }
 
 .form-group {
     margin-bottom: 8px;
+}
+
+.small-box-col-1 {
+    padding-right: 4px;
+}
+
+.small-box-col-2 {
+    padding-left: 4px;
+}
+
+.form-control::placeholder {
+    color: rgba(249, 249, 249, 0.6);
+}
+
+select#form-origin-country.form-control {
+    color: rgba(249, 249, 249, 0.6);
+    font-size: 18px;
+    padding: 20px;
+    line-height: 18px;
+    height: 62px;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.form-control:focus {
+    background-color: rgba(249, 249, 249, 0.1);
+    color: #fff;
+}
+
+.services-list h3 {
+    margin-top: 60px;
+}
+
+.services-list img {
+    margin-top: 60px;
+    resize: 120%;
+}
+
+.services-list p {
+    font-size: 18px;
+    margin: 10px 0 0 20px;
 }
