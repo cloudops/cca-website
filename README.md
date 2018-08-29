@@ -5,18 +5,10 @@ Install Dependencies
 --------------------
 
 We're using `hugow` which will download specified Hugo binary defined in `.hugo/version`
-(currently: `v0.46`). If you need to use Hugo binary directly instead of `make` command,
+(currently: `v0.47.1`). If you need to use Hugo binary directly instead of `make` command,
 make sure to execute: `./hugow` instead of plain `hugo`.
 
 **MacOS or Linux**
-
-Make sure `npm` is installed on your system.
-
-```bash
-npm install less -g
-npm install uglifycss -g
-npm install uglify-js -g
-```
 
 *MacOS*
 
@@ -27,13 +19,13 @@ brew install fswatch
 *Linux*
 
 ```bash
-apt install fswatch
+apt install inotify-tools
 ```
 
 Prepare Project
 -------------
 
-This will compile and concatenate all the static resources (`less`, `css` and `js` files).
+This will concatenate all the configs in `configs/` folder to generate `config.toml`.
 
 ```bash
 make prepare
@@ -57,7 +49,7 @@ make -- run --buildDrafts --baseURL http://rebrand.cloud.ca
 Watch For Changes
 -----------------
 
-Once you run `make run` you will want to have changes to the `less` and other files in the `resources` folder to get rebuild.  In order to do this, you need to run the command in new terminal.
+Note: As of v0.43 Hugo introduced Asset Pipeline which atuomatically compiles and concatenate `scss` files and this make target has been adjusted accordingly and it only watch for any changes in `configs/` and `config.common.toml`. Technically we don't need to run this command in a new terminal anymore. But if you want to autobuild any changes to config without restarting hugo server you need to run the command in new terminal.
 
 ```bash
 make watch
