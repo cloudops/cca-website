@@ -1,0 +1,105 @@
+<footer class="footer" id="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- primary row -->
+      <div class="col-lg-2 offset-lg-1 col-sm-12">
+        <!-- logo etc -->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="logo">
+              <img class="img-fluid orange-logo" src="{{ "images/logored.png" | absURL }}">
+            </div>
+
+            <div class="phone-number contact-info">
+              <a href="tel:+18887968364">1-888-796-8364</a>
+            </div>
+
+            <div class="email contact-info">
+              <a href="#">info@cloud.ca</a>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <div class="row">
+            <div class="col-1">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="col-1">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="col-1">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <i class="fab fa-google-plus-g"></i>
+            </div>
+            <div class="col-1">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="col-1">
+              <i class="fas fa-rss-square"></i>
+            </div>
+          </div>
+        </div>
+      </div> <!-- logo etc -->
+
+      <div class="toggle-footer col-sm-12 d-md-none">
+        <!-- menu items column -->
+        <button type="button" class="btn d-md-none collapse-footer collapsed" data-toggle="collapse" data-target="#menu-items" aria-controls="menu-items"
+          aria-expanded="false">
+          Collapse footer
+        </button>
+
+        <button type="button" class="btn d-md-none expand-footer collapsed" data-toggle="collapse" data-target="#menu-items" aria-controls="menu-items"
+          aria-expanded="false">
+          Expand footer
+        </button>
+
+        <div class="collapse row" id="menu-items">
+          <!-- menu items row -->
+          {{ with .Site.Data.menus }}
+            {{ range sort . }}
+            <div class="col-sm-12 close-button {{ .id }}">
+              <h5>{{ default .text ( i18n .text ) }}</h5>
+              <ul>
+                {{ range sort .items }}
+                <li><a href="{{ .link | absURL }}">{{ default .text ( i18n .text ) }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+            {{ end }}
+          {{ end }}
+        </div><!-- menu items row -->
+      </div> <!-- menu items column -->
+
+      <div class="col-lg-9">
+        <!-- menu items column -->
+        <div class="row" id="desktop-menu">
+
+          {{ with .Site.Data.menus }}
+            {{ range sort . }}
+            <div class="col-lg-3 close-button {{ .id }}">
+              <h5>{{ default .text ( i18n .text ) }}</h5>
+              <ul>
+                {{ range sort .items }}
+                <li><a href="{{ .link | absURL }}">{{ default .text ( i18n .text ) }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+            {{ end }}
+          {{ end }}
+        </div> <!-- menu items row -->
+      </div> <!-- menu items column -->
+    </div> <!-- primary row -->
+
+    <div class="row copy-privacy">
+      <div class="col-lg-3 offset-lg-1 col-sm-12">
+        <img id="mobile-footer-logo" src="{{ "images/logored.png" | absURL }}">
+        <p>&copy;2018 All Rights Reserved. Cloud.ca</p>
+        <p class="privacy"> <a href="#">Privacy and Terms</a> </p>
+      </div>
+    </div>
+  </div> <!-- .container-fluid -->
+</footer>

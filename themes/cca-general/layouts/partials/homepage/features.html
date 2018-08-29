@@ -1,0 +1,38 @@
+<div class="features">
+  <div class="container-fluid">
+    <div class="row technical-brief">
+      <div class="col-sm-12">
+        <h3>Technical Brief</h3>
+
+        <div class="row col-lg-10 offset-lg-1 col-sm-12">
+          {{ range sort .Site.Data.home.technical ".weight" }}
+          <div class="col-lg-4 col-sm-12">
+            <img src="{{ print "images/" .image ".png" | absURL }}">
+            <p>{{ .text }}</p>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-row-features-card">
+      <div class="col-sm-12">
+        <h4>Workloads running on cloud.ca</h4>
+
+        <div class="row workloads col-lg-10 offset-lg-1 col-sm-12">
+          {{ range sort .Site.Data.home.workload ".weight" }}
+            <div class="col-lg-4 col-sm-12">
+            <p>{{ .text }}</p>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row clouds-are-complex">
+      <div class="col-lg-4 offset-lg-4  col-sm-12">
+        <img class="img-fluid" src="{{ "images/clouds-are-complex.gif" | absURL }}">
+      </div>
+    </div>
+  </div>
+</div>

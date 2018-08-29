@@ -1,55 +1,10 @@
 # inject the variables required to deploy, if available (but don't track them in git)
 -include ./config.mk
 
-# tmp build directory
-TMP_DIR = /tmp
-TMP_CSS_FILE = tmp.css
+.PHONY: prepare build run watch deploy
 
-# LESS params
-LESS_DIR = ./resources/less
-LESS_FILE = main.less
-
-# CSS params
-CSS_DIR = ./static/css
-CSS_FILE = main.min.css
-
-# JS params
-JS_SRC_DIR = ./resources/js
-JS_SRC_FILE = main.js
-JS_DEST_DIR = ./static/js
-JS_DEST_FILE = main.min.js
-
-.PHONY: prepare prepare-css prepare-js prepare-conf prepare-themes build run watch deploy
-
-define clean_css
-	rm -f $(CSS_DIR)/$(CSS_FILE)
-endef
-
-define clean_js
-	rm -f $(JS_DEST_DIR)/$(JS_DEST_FILE)
-endef
-
-prepare: prepare-themes prepare-css prepare-js prepare-conf
-
-prepare-css:
-	if [ -d "$(LESS_DIR)" ]; then \
-		$(call clean_css); \
-		lessc $(LESS_DIR)/$(LESS_FILE) > $(TMP_DIR)/$(TMP_CSS_FILE); \
-		uglifycss $(TMP_DIR)/$(TMP_CSS_FILE) > $(CSS_DIR)/$(CSS_FILE); \
-		rm -f $(TMP_DIR)/$(TMP_CSS_FILE); \
-	fi
-
-prepare-js:
-	if [ -d "$(JS_SRC_DIR)" ]; then \
-		$(call clean_js); \
-		uglifyjs $(JS_SRC_DIR)/$(JS_SRC_FILE) > $(JS_DEST_DIR)/$(JS_DEST_FILE); \
-	fi
-
-prepare-conf:
+prepare:
 	cat config.common.toml configs/config.en.toml configs/config.fr.toml > config.toml
-
-prepare-themes:
-	cd themes/cca-general && $(MAKE) prepare
 
 build: prepare
 	# pass arguments <arg1> and <arg2> to the 'hugo' binary by running: make -- build <arg1> <arg2>
@@ -63,21 +18,17 @@ run: prepare
 	./hugow server --disableFastRender --theme cca-general $(filter-out $@,$(MAKECMDGOALS))
 
 watch:
-	# watch the resources directory and prepare css and js on demand
+	# watch the configs directory
 	if [ "`uname -s`" = "Darwin" ]; then \
 		fswatch -0 \
-			resources \
 			configs \
 			config.common.toml \
-			themes/cca-general/resources \
 		| xargs -0 -n 1 -I {} $(MAKE) prepare; \
 	else \
 		while true; do \
 			inotifywait --recursive -e modify,create,delete \
-				resources \
 				configs \
 				config.common.toml \
-				themes/cca-general/resources \
 			&& $(MAKE) prepare; \
 		done \
 	fi

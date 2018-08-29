@@ -1,0 +1,103 @@
+/** Intro of homepage **/
+.intro-wrapper-home {
+  /* For browsers that do not support gradients */
+  background: $global-official-red;
+
+  background: -webkit-linear-gradient($global-official-red, $global-official-blue);
+  background: -o-linear-gradient($global-official-red, $global-official-blue);
+  background: -moz-linear-gradient($global-official-red, $global-official-blue);
+  background: linear-gradient($global-official-red, $global-official-blue);
+
+  color: $global-official-white;
+  font-family: $font-family;
+  text-align: center;
+  position: relative;
+  padding-bottom: 200px;
+
+  h1 {
+    padding-top: 300px;
+  }
+
+  h2 {
+    @media screen and (max-width : 768px) {
+      font-size: 60px;
+      margin-left: 20px;
+    }
+  }
+
+  h3 {
+    padding: 300px 0 75px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  .with-line {
+    @media screen and (max-width : 768px) {
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 50px;
+        height: 1px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $global-official-light-grey;
+        background-color: $global-official-light-grey;
+        opacity: 0.5;
+        border-radius: 1px;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-25px);
+      }
+    }
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.canadian-owned {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    &.easy-access {
+      width: 130px;
+      height: auto;
+      margin-top: 5px;
+      margin-bottom: 25px;
+    }
+
+    &.flexible-offerings {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+/** Intro of inner pages **/
+.intro-wrapper {
+  /* For browsers that do not support gradients */
+  background: $intro-background-gradient-start;
+
+  background: -webkit-linear-gradient($intro-background-gradient-start, $global-official-red);
+  background: -o-linear-gradient($intro-background-gradient-start, $global-official-red);
+  background: -moz-linear-gradient($intro-background-gradient-start, $global-official-red);
+  background: linear-gradient($intro-background-gradient-start, $global-official-red);
+
+  padding: 180px 0 80px;
+
+  h1 {
+    color: $global-official-white;
+    font-weight: lighter;
+    font-size: 48px;
+    text-align: center;
+    font-family: $font-family;
+  }
+}

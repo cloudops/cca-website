@@ -20,11 +20,6 @@ languagecode                  = "en"
   [social]
     twitter          = "cloud.ca"
 
-# === STATIC VERSION ===
-[params.version]
-  css = "1"
-  js  = "2"
-
 # === MAIN MENU (NAME = I18N ID) ===
 [params.home]
   name   = "menu_home"

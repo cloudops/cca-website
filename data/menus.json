@@ -1,0 +1,121 @@
+[{
+    "id": "why-cloudca",
+    "text": "menu_why",
+    "link": "#",
+    "resources": false,
+    "items": [{
+        "text": "menu_why_hyperscale",
+        "link": "why/hyperscale"
+    }, {
+        "text": "menu_why_usecase",
+        "link": "why/usecases"
+    }, {
+        "text": "menu_why_location",
+        "link": "why/location"
+    }]
+}, {
+    "id": "general",
+    "text": "menu_general",
+    "link": "#",
+    "resources": true,
+    "items": [{
+        "text": "menu_general_about",
+        "link": "general/about"
+    }, {
+        "text": "menu_general_blog",
+        "link": "general/blog"
+    }, {
+        "text": "menu_general_customers",
+        "link": "general/customers"
+    }, {
+        "text": "menu_general_partners",
+        "link": "general/partners"
+    }, {
+        "text": "menu_general_whitepapers",
+        "link": "general/whitepapers"
+    }, {
+        "text": "menu_general_careers",
+        "link": "general/careers"
+    }]
+}, {
+    "id": "sales",
+    "text": "menu_sales",
+    "link": "#",
+    "resources": true,
+    "items": [{
+        "text": "menu_sales_contact",
+        "link": "sales/contact"
+    }, {
+        "text": "menu_sales_demo",
+        "link": "sales/demo"
+    }, {
+        "text": "menu_sales_events",
+        "link": "sales/events"
+    }]
+}, {
+    "id": "support",
+    "text": "menu_support",
+    "link": "#",
+    "resources": true,
+    "items": [{
+        "text": "menu_support_support",
+        "link": "support/support"
+    }, {
+        "text": "menu_support_sla",
+        "link": "support/sla"
+    }, {
+        "text": "menu_support_certifications",
+        "link": "support/certifications"
+    }, {
+        "text": "menu_support_status",
+        "link": "support/status"
+    }, {
+        "text": "menu_support_knowledge_base",
+        "link": "support/knowledge_base"
+    }]
+}, {
+    "id": "developers",
+    "text": "menu_developers",
+    "link": "#",
+    "resources": true,
+    "items": [{
+        "text": "menu_developers_api",
+        "link": "developers/api"
+    }, {
+        "text": "menu_developers_tools",
+        "link": "developers/tools"
+    }]
+}, {
+    "id": "product",
+    "text": "menu_product",
+    "link": "#",
+    "resources": false,
+    "items": [{
+        "text": "menu_product_multitenant",
+        "link": "product/multi-tenant"
+    }, {
+        "text": "menu_product_storage",
+        "link": "product/storage"
+    }, {
+        "text": "menu_product_dedicated",
+        "link": "product/dedicated"
+    }, {
+        "text": "menu_product_baremetal",
+        "link": "product/baremetal"
+    }]
+}, {
+    "id": "pricing",
+    "text": "menu_pricing",
+    "link": "#",
+    "resources": false,
+    "items": [{
+        "text": "menu_pricing_option1",
+        "link": "pricing/option1"
+    }, {
+        "text": "menu_pricing_option2",
+        "link": "pricing/option2"
+    }, {
+        "text": "menu_pricing_option3",
+        "link": "pricing/option3"
+    }]
+}]

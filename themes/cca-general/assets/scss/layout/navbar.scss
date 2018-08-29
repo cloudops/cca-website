@@ -1,0 +1,199 @@
+/* NAVBAR */
+body > .wrapper > .navbar {
+  position: absolute;
+}
+
+.navbar {
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 35px 100px 0 120px;
+  font-size: 14px;
+  font-family: $font-family;
+  font-weight: normal;
+
+  @media screen and (max-width : 768px) {
+    padding: 0 10px;
+  }
+
+  .logo-white {
+    margin-top: 5px;
+
+    @media screen and (max-width : 768px) {
+      height: 35px;
+      margin-top: 0;
+    }
+  }
+
+  .nav-item {
+    margin-right: 35px;
+  }
+
+  a {
+    color: $global-official-white;
+    white-space: normal;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+
+  .btn {
+    background-color: $global-official-white;
+    border: 0;
+    color: $global-official-red;
+    padding: 4px 7px 2px;
+    font-size: 14px;
+    font-family: $font-family;
+    font-weight: normal;
+    margin-top: 4px;
+  }
+
+  h5 {
+    padding-left: 0;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .navbar-toggler {
+    color: $global-official-white;
+    margin-right: 10px;
+  }
+
+  .dropdown-menu {
+     /* For browsers that do not support gradients */
+    background: $global-official-white;
+    background: -webkit-linear-gradient($global-official-white, $global-official-dark-grey);
+    background: -o-linear-gradient($global-official-white, $global-official-dark-grey);
+    background: -moz-linear-gradient($global-official-white, $global-official-dark-grey);
+    background: linear-gradient($global-official-white, $global-official-dark-grey);
+    width: auto;
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+    border: none;
+    padding: 15px;
+
+    &.large-menu {
+      width: 370px;
+    }
+
+    ul {
+      padding: 0;
+
+      .dropdown-item {
+        text-align: left;
+        line-height: 1.25em;
+        color: $global-official-dark-grey;
+        font-size: 11px;
+        font-family: $font-family;
+        font-weight: normal;
+        text-transform: capitalize;
+        padding-left: 0;
+      }
+    }
+
+    .arrow {
+      border: 10px solid transparent;
+      border-color: transparent transparent $global-official-white transparent;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-10px);
+    }
+  }
+
+  /* Navbar Side */
+  .navbar-side {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    list-style: none;
+
+    background: #f5f7f1;
+
+    background: -webkit-linear-gradient($global-official-white, $global-official-dark-grey);
+    background: -o-linear-gradient($global-official-white, $global-official-dark-grey);
+    background: -moz-linear-gradient($global-official-white, $global-official-dark-grey);
+    background: linear-gradient($global-official-white, $global-official-dark-grey);
+
+    overflow-y: scroll;
+    z-index: 1000;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+
+    &.reveal {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%);
+      -webkit-transition: -webkit-transform 0.5s;
+      transition-property: -webkit-transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      transition: transform 0.5s;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+    }
+
+    .close-side-button {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .navbar-side-items {
+      a {
+        color: $global-official-dark-grey;
+        font-size: 18px;
+        font-family: $font-family;
+        text-transform: capitalize;
+        margin-left: 0;
+      }
+
+      ul {
+        font-family: $font-family;
+        padding: 0 20px 20px;
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+  }
+}
+
+/* MOBILE NAVBAR*/
+// FIXME: these seem to be not in use
+// @media screen and (max-width : 768px) {
+//   &.scrolled .logored {
+//       display: inline-block;
+//   }
+//
+//   &.scrolled .logo-red {
+//       height: 35px;
+//       margin-top: 0;
+//   }
+// }

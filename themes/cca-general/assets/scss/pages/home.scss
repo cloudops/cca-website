@@ -1,0 +1,136 @@
+.homepage {
+  /** Features **/
+  .features {
+    background-color: $global-absolute-white;
+    text-align: center;
+    color: $global-official-red;
+    padding: 100px 0 0 0;
+    position: relative;
+
+    h3 {
+      padding-bottom: 80px;
+
+      @media screen and (max-width : 768px) {
+        font-size: 30px;
+        margin-left: 20px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: $global-official-dark-grey;
+    }
+
+    .text-row-features-card h4 {
+      padding: 60px 0 20px 0;
+      font-size: 40px;
+    }
+
+    /*MOBILE FEATURES CARD*/
+    @media screen and (max-width : 768px) {
+      .homepage .tech-brief img {
+        display: inline-block;
+        height: 230px;
+      }
+
+      .homepage .features-card .card-section .workloads p {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  /* Call to Action */
+  .call-to-action-card {
+    background: $global-official-orange;
+
+    background: -webkit-linear-gradient($global-official-orange, $global-official-red);
+    background: -o-linear-gradient($global-official-orange, $global-official-red);
+    background: -moz-linear-gradient($global-official-orange, $global-official-red);
+    background: linear-gradient($global-official-orange, $global-official-red);
+
+    color: $global-official-white;
+    font-family: $font-family;
+
+    position: relative;
+    z-index: 400;
+
+    @media screen and (max-width : 768px) {
+      padding: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $global-official-white;
+      background-color: $global-official-white;
+      opacity: 0.5;
+      border-radius: 1px;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+
+      @media screen and (max-width : 768px) {
+        display: none;
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      color: $global-absolute-white;
+
+      &:link {
+        color: $global-official-white;
+      }
+    }
+
+    .cta-block {
+      text-align: center;
+      padding: 100px 0;
+      @media screen and (max-width : 768px) {
+        padding: 0;
+      }
+    }
+
+    .row .col-sm-12 {
+      @media screen and (max-width : 768px) {
+        position: relative;
+        height: 100px;
+
+        &::after {
+          content: '';
+          background: $global-official-white;
+          width: 50px;
+          height: 2px;
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-25px);
+          border-radius: 25px;
+        }
+
+        &:first-child::after {
+          display: none;
+        }
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          line-height: 100px;
+        }
+      }
+    }
+  }
+}

@@ -1,2 +1,102 @@
-[menu_home]
-other = "Home"
+[menu_why]
+other = "Why cloud.ca"
+
+[menu_why_hyperscale]
+other = "Hyperscale comparison"
+
+[menu_why_usecase]
+other = "Use cases"
+
+[menu_why_location]
+other = "Locations"
+
+[menu_general]
+other = "General"
+
+[menu_general_about]
+other = "About us"
+
+[menu_general_blog]
+other = "Blog"
+
+[menu_general_customers]
+other = "Customers"
+
+[menu_general_partners]
+other = "Partners"
+
+[menu_general_whitepapers]
+other = "White papers"
+
+[menu_general_careers]
+other = "Careers"
+
+[menu_sales]
+other = "Sales"
+
+[menu_sales_contact]
+other = "Contact us"
+
+[menu_sales_demo]
+other = "Request demo or a quote"
+
+[menu_sales_events]
+other = "Events"
+
+[menu_support]
+other = "Support"
+
+[menu_support_support]
+other = "Get support"
+
+[menu_support_sla]
+other = "SLA"
+
+[menu_support_certifications]
+other = "Certifications"
+
+[menu_support_status]
+other = "Status"
+
+[menu_support_knowledge_base]
+other = "Knowledge base"
+
+[menu_developers]
+other = "Developers"
+
+[menu_developers_api]
+other = "API docs"
+
+[menu_developers_tools]
+other = "Tools"
+
+[menu_product]
+other = "Product"
+
+[menu_product_multitenant]
+other = "Multi-tenant cloud"
+
+[menu_product_storage]
+other = "Storage"
+
+[menu_product_dedicated]
+other = "Dedicated infrastructure"
+
+[menu_product_baremetal]
+other = "Bare metal"
+
+[menu_pricing]
+other = "Pricing"
+
+[menu_pricing_option1]
+other = "Option 1"
+
+[menu_pricing_option2]
+other = "Option 2"
+
+[menu_pricing_option3]
+other = "Option 3"
+
+[menu_resources]
+other = "Resources"
+

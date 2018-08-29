@@ -1,0 +1,86 @@
+<nav class="navbar fixed-top navbar-expand-xl" role="navigation">
+  <a class="navbar-brand" href="{{ print "/" | absLangURL }}">
+    <img class="logo-white" src="{{ "images/logowhite.png" | absURL }}" alt="cloud.ca">
+  </a>
+
+  <div class="collapse navbar-collapse">
+    {{ with .Site.Data.menus }}
+    <ul class="nav navbar-nav ml-auto">
+      {{ range ( where . "resources" false ) }}
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="{{ .link | absURL }}" id="navbar-{{ .text }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ default .text ( i18n .text ) }}
+          <span class="sr-only">(current)
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbar-{{ .text }}">
+          <div class="arrow"></div>
+          <div class="row">
+            <div class="col-sm-12">
+              <ul>
+                {{ range sort .items }}
+                <li><a class="dropdown-item" href="{{ .link | absURL }}">{{ default .text ( i18n .text ) }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      {{ end }}
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbar-resources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ i18n "menu_resources" }}
+          <span class="sr-only">(current)
+          </a>
+          <div class="dropdown-menu large-menu" aria-labelledby="navbar-resources">
+            <div class="arrow"></div>
+            <div class="row">
+              {{ range ( where . "resources" true ) }}
+              <div class="col-sm-3">
+                <h5 class="dropdown-header">{{ default .text ( i18n .text ) }}</h5>
+                <ul>
+                  {{ range sort .items }}
+                  <li><a class="dropdown-item" href="{{ .link | absURL }}">{{ default .text ( i18n .text ) }}</a></li>
+                  {{ end }}
+                </ul>
+              </div>
+              {{ end }}
+          </div>
+        </div>
+      </li>
+      <li class="nav-button">
+        <button class="btn btn-outline" type="button">Login | Signup</button>
+      </li>
+    </ul>
+    {{ end }}
+  </div>
+
+  <button class="navbar-toggler pull-xs-right" id="navbar-side-button" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+      <i class="fas fa-bars"></i>
+    </span>
+  </button>
+
+  <ul class="navbar-side">
+    <li class="navbar-side-items">
+      <div class="row">
+        <a class="close-side-button">
+          <i class="fas fa-times"></i>
+        </a>
+        {{ with .Site.Data.menus }}
+          {{ range sort . }}
+          <div class="col-sm-12 {{ .id }}">
+            <h5>{{ default .text ( i18n .text ) }}</h5>
+            <ul>
+              {{ range sort .items }}
+              <li><a href="{{ .link | absURL }}">{{ default .text ( i18n .text ) }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </li>
+  </ul>
+
+  <div class="overlay"></div>
+</nav>

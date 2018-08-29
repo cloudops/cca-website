@@ -1,18 +1,12 @@
-<!doctype html>
-<html lang="en">
-
-    {{ partial "head.html" }}
-
-    <body id="homepage">
-
-        {{ partial "navbar.html" }}
-
-        {{ partial "homepage/intro-card.html" }}
-        {{ partial "homepage/features-card.html" }}
-        {{ partial "homepage/call-to-action-card.html" }}
-
-        {{ partial "footer.html" }}
-
-        {{ partial "js.html" }}
-    </body>
-</html>
+{{ define "title" }}
+  {{ .Site.Title }}
+{{ end }}
+{{ define "intro" }}
+  {{ partial "header/intro-home.html" . }}
+{{ end }}
+{{ define "content" }}
+  <div class="homepage">
+    {{ partial "homepage/features.html" . }}
+    {{ partial "homepage/call-to-action.html" . }}
+  </div>
+{{ end }}
