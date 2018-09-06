@@ -1,4 +1,6 @@
 .pricing {
+
+    /* CONTENT-MAIN-NAVBAR */
   .content-main-nav {
     background-color: @global-absolute-white;
     padding: 0;
@@ -18,7 +20,7 @@
       }
     }
   }
-
+    /* CONTENT-SECONDARY-NAVBAR */
   .content-secondary-nav {
     /* For browsers that do not support gradients */
     background: @global-official-white;
@@ -44,6 +46,7 @@
     }
   }
 
+    /* CONTENT-CARD*/
   .content-card {
     padding: 120px 0;
 
@@ -64,7 +67,12 @@
       color: @global-official-dark-grey;
       padding: 10px 20px 0 15px;
     }
-
+    .lesson-video {
+        padding-top: 55px;
+    }
+    .special-offer-row {
+        padding-left: 9px;
+    }
     .next-button a {
       font-size: 17px;
       font-weight: bold;
@@ -80,6 +88,27 @@
       margin: 7px 7px;
     }
   }
+
+  /* MOBILE CONTENT-CARD*/
+  @media screen and (max-width : 768px) {
+
+      .content-card {
+        padding: 60px 0;
+        }
+          .content-card .special-offer-row {
+          padding-left: 0;
+          text-align: center;
+        }
+        .content-card .lesson-video {
+            padding-top: 10px;
+        }
+        .content-card .next-button {
+            padding-top: 20px;
+            padding-left: 0;
+            padding-bottom: 40px;
+        }
+  }
+
 
   .services-card {
     /* For browsers that do not support gradients */
@@ -103,7 +132,7 @@
       text-decoration: underline;
     }
 
-    /* COmpute */
+    /* COMPUTE */
     .compute-price-row {
       margin-top: 20px;
       padding-left: 30px;
@@ -256,18 +285,42 @@
       }
     }
 
+    /* MOBILE LICENSES*/
+    @media screen and (max-width : 768px) {
+        .licenses-term-discounts h3 {
+            padding-left: 0;
+            text-align: center;
+          }
+        .licenses-term-discounts p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+
+        .licenses-term-discounts .license-mobility p {
+            text-align: center;
+        }
+
+        .licenses-term-discounts .buttons-row {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
     /* Contact Form */
     .contact-form {
       h5 {
         font-size: 28px;
         font-weight: lighter;
         padding: 80px 0 20px;
+        color: @global-absolute-white;
+        text-transform: initial;
       }
       .form-control {
         border: none;
         border-radius: 0;
         background-color: rgba(249, 249, 249, 0.1);
-        color: #fff;
+        color: @global-absolute-white;
         text-transform: uppercase;
         font-size: 18px;
         padding: 20px;
@@ -317,6 +370,17 @@
       }
     }
 
+    /* MOBILE CONTACT FORM */
+
+    @media screen and (max-width : 768px) {
+      .contact-form .small-box-col-1 {
+        padding-right: 15px;
+      }
+      .contact-form .small-box-col-2 {
+          padding-left: 15px;
+      }
+    }
+
     /* Services */
     .services-list h3 {
       margin-top: 60px;
@@ -330,4 +394,23 @@
       margin: 10px 0 0 20px;
     }
   }
+  /*MOBILE SERVICES CARD*/
+  @media screen and (max-width : 768px) {
+      .services-list img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+
+      }
+
+      .services-list h3 {
+          text-align: center;
+      }
+
+      .services-list p {
+          text-align: center;
+      }
+  }
+
+
 }

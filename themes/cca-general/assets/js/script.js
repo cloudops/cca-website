@@ -1,6 +1,5 @@
 $(document).ready(function () {
     initNavBarSlideOut();
-    initScrollForNavBar();
 });
 
 var initNavBarSlideOut = function () {
