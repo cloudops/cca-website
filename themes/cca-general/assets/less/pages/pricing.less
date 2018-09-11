@@ -203,7 +203,7 @@
 
         &:before {
           content: '';
-          width: 50px;
+          width: 30px;
           height: 1px;
           border-style: solid;
           border-width: 1px;
@@ -218,7 +218,7 @@
     }
 
 
-    /* Storage */
+    /* STORAGE */
     .storage {
       h6 {
         text-transform: uppercase;
@@ -270,13 +270,69 @@
         padding-right: 0;
       }
       .storage-3-option {
-        padding-bottom: 46px;
+        padding-bottom: 25px;
       }
       .additional-performance {
         font-size: 12px;
         margin-top: 20px;
         padding: 0;
       }
+    }
+
+
+    /* MOBILE STORAGE*/
+    @media screen and (max-width : 768px) {
+        .storage .block-storage {
+            border-right: 0 solid #fff;
+            border-top: 0 solid #fff;
+            border-bottom: 0 solid #fff;
+            margin-left: 5px;
+        }
+
+        .storage .storage-3 {
+          border-top: 0 solid #fff;
+          border-bottom: 0 solid #fff;
+          margin-right: 0;
+          margin-left: 10px;
+        }
+        .storage .with-line {
+            position: relative;
+
+            &:before {
+              content: '';
+              width: 30px;
+              height: 1px;
+              border-style: solid;
+              border-width: 1px;
+              border-color: @global-official-light-grey;
+              background-color: @global-official-light-grey;
+              opacity: 0.5;
+              border-radius: 1px;
+              position: absolute;
+              top: 0;
+            }
+          }
+
+           .storage .additional-performance {
+               margin-left: 40px;
+               margin-right: 30px;
+               position: relative;
+
+               &:before {
+                 content: '';
+                 width: 30px;
+                 height: 1px;
+                 border-style: solid;
+                 border-width: 1px;
+                 border-color: @global-official-light-grey;
+                 background-color: @global-official-light-grey;
+                 opacity: 0.5;
+                 border-radius: 1px;
+                 position: absolute;
+                 top: -24px;
+           }
+       }
+
     }
 
     /* Networking */
