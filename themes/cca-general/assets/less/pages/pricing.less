@@ -182,6 +182,40 @@
       text-align: right;
     }
 
+    /* MOBILE COMPUTE*/
+
+    @media screen and (max-width : 768px) {
+
+        .compute h3 {
+            margin-bottom: 40px;
+        }
+        .compute-price-col {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .other-compute {
+            text-align: left;
+            margin-left: 15px;
+        }
+
+    .with-line {
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 50px;
+          height: 1px;
+          border-style: solid;
+          border-width: 1px;
+          border-color: @global-official-light-grey;
+          background-color: @global-official-light-grey;
+          opacity: 0.5;
+          border-radius: 1px;
+          position: absolute;
+          top: -25px;
+        }
+      }
+    }
 
 
     /* Storage */
@@ -214,6 +248,11 @@
         font-size: 28px;
         font-weight: lighter;
         line-height: 0;
+      }
+      .monthly-word {
+            font-size: 12px;
+            font-weight: lighter;
+            line-height: 0;
       }
       .IOPS-GB {
         font-size: 14px;
