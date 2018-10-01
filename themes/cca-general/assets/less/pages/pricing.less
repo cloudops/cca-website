@@ -13,6 +13,7 @@
       padding: 6px 0 10px;
       margin: 0 40px;
       border-top: 4px solid transparent;
+      width: 100%;
 
       &.active,
       &:hover {
@@ -20,6 +21,19 @@
       }
     }
   }
+
+      /* MOBILE CONTENT-MAIN-NAVBAR */
+
+  @media screen and (max-width : 992px) {
+    .content-main-nav {
+      display: none;
+    }
+
+  }
+
+
+
+
     /* CONTENT-SECONDARY-NAVBAR */
   .content-secondary-nav {
     /* For browsers that do not support gradients */
@@ -30,8 +44,8 @@
     background: -moz-linear-gradient(to right, @global-official-white, @global-official-light-grey);
     background: linear-gradient(to right, @global-official-white, @global-official-light-grey);
 
-    padding: 0 0 0 330px;
-
+    padding: 0;
+    
     .navbar-nav .nav-item .nav-link {
       text-transform: uppercase;
       color: @global-official-dark-grey;
