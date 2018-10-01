@@ -45,7 +45,7 @@
     background: linear-gradient(to right, @global-official-white, @global-official-light-grey);
 
     padding: 0;
-    
+
     .navbar-nav .nav-item .nav-link {
       text-transform: uppercase;
       color: @global-official-dark-grey;
@@ -209,6 +209,7 @@
 
         .compute h3 {
             margin-bottom: 40px;
+            margin-left: 10px;
         }
         .compute-price-col {
             margin-top: 25px;
@@ -321,60 +322,64 @@
 
     /* MOBILE STORAGE*/
     @media screen and (max-width : 992px) {
-        .storage .block-storage {
-            border-right: 0 solid #fff;
-            border-top: 0 solid #fff;
-            border-bottom: 0 solid #fff;
-            margin-left: 5px;
-        }
+      .storage h3 {
+        margin-left: 10px;
+      }
 
-        .storage .storage-3 {
+      .storage .block-storage {
+          border-right: 0 solid #fff;
           border-top: 0 solid #fff;
           border-bottom: 0 solid #fff;
-          margin-right: 0;
-          margin-left: 10px;
-        }
-        .storage .with-line {
-            position: relative;
+          margin-left: 5px;
+      }
 
-            &:before {
-              content: '';
-              width: 30px;
-              height: 1px;
-              border-style: solid;
-              border-width: 1px;
-              border-color: @global-official-light-grey;
-              background-color: @global-official-light-grey;
-              opacity: 0.5;
-              border-radius: 1px;
-              position: absolute;
-              top: 0;
-            }
+      .storage .storage-3 {
+        border-top: 0 solid #fff;
+        border-bottom: 0 solid #fff;
+        margin-right: 0;
+        margin-left: 10px;
+      }
+        storage .with-line {
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: @global-official-light-grey;
+            background-color: @global-official-light-grey;
+            opacity: 0.5;
+            border-radius: 1px;
+            position: absolute;
+            top: 0;
           }
+        }
 
-           .storage .additional-performance {
-               margin-left: 40px;
-               margin-right: 30px;
-               position: relative;
+         .storage .additional-performance {
+             margin-left: 40px;
+             margin-right: 30px;
+             position: relative;
 
-               &:before {
-                 content: '';
-                 width: 30px;
-                 height: 1px;
-                 border-style: solid;
-                 border-width: 1px;
-                 border-color: @global-official-light-grey;
-                 background-color: @global-official-light-grey;
-                 opacity: 0.5;
-                 border-radius: 1px;
-                 position: absolute;
-                 top: -24px;
-           }
-       }
+             &:before {
+               content: '';
+               width: 30px;
+               height: 1px;
+               border-style: solid;
+               border-width: 1px;
+               border-color: @global-official-light-grey;
+               background-color: @global-official-light-grey;
+               opacity: 0.5;
+               border-radius: 1px;
+               position: absolute;
+               top: -24px;
+         }
+     }
 
     }
 
-    /* Networking */
+    /* NETWORKING */
     .networking {
       h3 {
         padding-bottom: 30px;
@@ -390,7 +395,14 @@
       }
     }
 
-    /* License */
+    /* MOBILE NETWORKING */
+    @media screen and (max-width : 992px) {
+        .networking h3 {
+            margin-left: 10px;
+        }
+    }
+
+    /* LICENSES */
     .licenses-term-discounts {
       h3 {
         padding-bottom: 10px;
@@ -441,7 +453,7 @@
         }
     }
 
-    /* Contact Form */
+    /* CONTACT FORM */
     .contact-form {
       h5 {
         font-size: 28px;
@@ -515,7 +527,7 @@
       }
     }
 
-    /* Services */
+    /* SERVICES CARD*/
     .services-list h3 {
       margin-top: 60px;
     }
