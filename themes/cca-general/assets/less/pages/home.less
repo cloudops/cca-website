@@ -44,12 +44,12 @@
 
   .healthcare {
     margin: 0 -15px;
-    background: #ff6a00, url(/../../../static/images/healthcare-line.png);
+    background-color: #ff6a00;
 
-    background: -webkit-linear-gradient(#ed6979, #ff6a00), url(/../../../images/healthcare-line.png) no-repeat bottom center;
-    background: -o-linear-gradient(#ed6979, #ff6a00), url(/../../../images/healthcare-line.png) no-repeat bottom center;
-    background: -moz-linear-gradient(#ed6979, #ff6a00), url(/../../../static/images/healthcare-line.png) no-repeat bottom center;
-    background: linear-gradient(#ed6979, #ff6a00), url(/../../../static/images/healthcare-line.png) no-repeat bottom center;
+    background-image: url(/images/healthcare-line.png), linear-gradient(#ed6979, #ff6a00);
+    background-repeat:  repeat-x;
+    background-size: contain;
+    background-position: 50% 78%;
 
     h4 {
       font-size: 40px;
