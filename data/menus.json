@@ -1,11 +1,11 @@
 [{
     "id": "why-cloudca",
     "text": "menu_why",
-    "link": "#",
+    "link": "why/",
     "resources": false,
     "items": [{
-        "text": "menu_why_hyperscale",
-        "link": "why/hyperscale"
+        "text": "menu_why",
+        "link": "why/"
     }, {
         "text": "menu_why_usecase",
         "link": "why/usecases"
