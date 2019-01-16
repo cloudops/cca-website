@@ -5,11 +5,20 @@
         <h4>Solutions built on cloud.ca</h4>
 
         <div class="row workloads col-lg-10 offset-lg-1 col-sm-12">
-          {{ range sort .Site.Data.home.workload ".weight" }}
-            <div class="col-lg-4 col-sm-12">
-            <p>{{ .text }}</p>
+            <div class="col-lg-10 offset-lg-1 col-sm-12">
+                <table style="width:100%">
+                    <tr>
+                      <td>Dev / Test environments</td>
+                      <td>Virtual desktops</td>
+                      <td>Legacy applications</td>
+                    </tr>
+                    <tr>
+                      <td>SaaS platforms</td>
+                      <td>Web applications</td>
+                      <td>Infrastructure reseller</td>
+                      </tr>
+                  </table> 
           </div>
-          {{ end }}
         </div>
       </div>
     </div>
