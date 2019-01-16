@@ -54,6 +54,29 @@
             border-right-style: none;
         }
 
+        @media screen and (max-width : 768px) {
+            td {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                vertical-align: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                border-right: none;
+                border-bottom: solid 1px @global-official-red;
+            }
+
+            td img {
+                width: 200px;
+                margin: auto;
+            }
+            .customers td {
+                border-bottom-style: none;
+            }
+        }
+
+
     }  
 
 
@@ -78,6 +101,7 @@
       text-align: center;
       background-color: @global-absolute-white;
       margin: 10px 0;
+      width: 140px;
     }
     
         a.btn{

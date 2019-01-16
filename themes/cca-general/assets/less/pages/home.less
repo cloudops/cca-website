@@ -51,6 +51,7 @@
       font-size: 40px;
     }
 
+
     /*MOBILE FEATURES CARD*/
     @media screen and (max-width : 768px) {
       .homepage .tech-brief img {
@@ -61,6 +62,25 @@
       .homepage .features-card .card-section .workloads p {
         margin-left: 40px;
       }
+
+      td {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 30px 0;
+      }
+
+      table td {
+        border-top: none; 
+        border-bottom: 1px solid @global-official-light-grey; 
+        border-left: none; 
+        border-right: none;
+      }
+
+      table tr:last-child td {
+        border-bottom: 1px solid @global-official-light-grey;
+      }
+
     }
   }
 
@@ -94,7 +114,14 @@
       text-transform: uppercase;
       padding: 7px 20px 5px;
       margin: 15px 0px 60px;
+      width: 122px;
+
+      &:hover {
+        text-decoration: none;
+        font-weight: bold;
       }
+      }
+
   }
  
 
