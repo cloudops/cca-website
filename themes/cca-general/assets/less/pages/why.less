@@ -13,7 +13,7 @@
             padding-top: 100px;
         }
 
-        p, li {
+        p, li, th, td, {
             font-size: 20px;
             color: @global-official-dark-grey;
             font-weight: lighter;
@@ -37,6 +37,40 @@
         a {
             color: @global-official-red;
         }
+
+        th {
+            text-transform: uppercase;
+        }
+
+        th, td {
+            border-bottom: 1px solid @global-official-light-grey;
+            text-align: center;
+            padding: 6px 15px;
+        }
+
+        th:first-child, td:first-child {
+            text-align: left;
+        }
+
+        tr:nth-child(odd) {background-color: @global-official-white;}
+        tr:nth-child(1) {background-color: transparent;}
+
+
+        .canada-map-for-mobile {
+            display: none;
+        }
+
+        @media screen and (max-width : 991px) {
+
+            background-image: none;
+
+        .canada-map-for-mobile {
+            display: block;
+        }
+        
+        }
+
+
     }
 
     .cta-card {
@@ -75,6 +109,5 @@
               }
 
     }
-
 
 }

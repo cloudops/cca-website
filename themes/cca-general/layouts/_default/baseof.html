@@ -8,14 +8,15 @@
 
   <base href="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  <link href="/fontawesome/css/all.css" rel="stylesheet">
 
   {{ partial "head/keywords.html" . }}
 
   <title>
     {{ block "title" . }}
-      {{ with .Title }}
+      {{ with .Title }}ß
         {{ . }} · {{ $.Site.Title }}
-      {{ else }}
+      {{ else }} s
         {{ .Site.Title }}
       {{ end }}
     {{ end }}
