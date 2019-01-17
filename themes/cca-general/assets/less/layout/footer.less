@@ -78,9 +78,6 @@
     display: none;
   }
 
-  .footer .social-icons{
-    padding-left: 20px;
-  }
 
   /* Toggle Buttons */
   .footer .toggle-footer::before,
@@ -94,7 +91,7 @@
 
     position: absolute;
     left: 90px;
-    transform: translateX(-25px);
+    transform: translateX(-52px);
 
     border-radius: 25px;
   }
@@ -104,7 +101,11 @@
     min-height: 40px;
     color: @global-official-dark-grey;
     font-size: 18px;
-    padding-left: 20px;
+    padding: 12px;
+  }
+
+  .footer .toggle-footer {
+    padding-left: 0;
   }
 
   .footer .toggle-footer .btn.collapse-footer.collapsed {
@@ -161,5 +162,9 @@
   .footer .copy-privacy #mobile-footer-logo {
     display: inline;
     margin: 150px 0 20px;
+  }
+
+  .footer .copy-privacy {
+    padding-top: 30px;
   }
 }

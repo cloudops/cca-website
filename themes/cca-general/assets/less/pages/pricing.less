@@ -381,6 +381,15 @@
   }
 
      /* LICENSES */
+
+     ul li::before {
+      content: "\2022";  /* CSS unicode for a bullet */
+      color: @global-official-red;
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1.5em; /* Also needed for space */
+      margin-left: -1.5em; /* Also needed for space*/
+  }
+
      .licenses-term-discounts {
       h3 {
         padding-bottom: 10px;
@@ -391,7 +400,7 @@
       }
       .license-mobility p {
         font-size: 12px;
-        text-align: right;
+        text-align: left;
       }
       .buttons-row {
         padding-left: 8px;
