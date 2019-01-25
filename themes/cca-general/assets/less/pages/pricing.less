@@ -382,18 +382,28 @@
 
      /* LICENSES */
 
-     ul li::before {
-      content: "\2022";  /* CSS unicode for a bullet */
-      color: @global-official-red;
-      display: inline-block; /* Needed to add space between the bullet and the text */
-      width: 1.5em; /* Also needed for space */
-      margin-left: -1.5em; /* Also needed for space*/
-  }
+    .licenses-term-discounts {
 
-     .licenses-term-discounts {
+
+      ul li::before {
+        content: "\2022";  /* CSS unicode for a bullet */
+        color: @global-official-red;
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1.5em; /* Also needed for space */
+        margin-left: -1.5em; /* Also needed for space*/
+        }
+
+
       h3 {
+        border-top: none;
         padding-bottom: 10px;
       }
+
+      
+      .term-discounts h3 {
+        border-top: solid 1px @global-official-red;
+      }
+      
       p {
         padding-left: 15px;
         font-size: 18px;
@@ -401,6 +411,7 @@
       .license-mobility p {
         font-size: 12px;
         text-align: left;
+        padding-bottom: 30px;
       }
       .buttons-row {
         padding-left: 8px;

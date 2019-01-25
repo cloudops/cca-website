@@ -34,6 +34,31 @@
             color: @global-official-red;
         }
 
+        .customers-table-content {
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+
+        .customer-solutions {
+            background-color: #fff;
+            margin: 100px 0;
+            box-shadow: 2px 10px 15px rgba(0, 0, 0, .5);
+            padding: 10px;
+
+            h3 {
+                padding: 50px 100px 0 100px;
+            }
+
+            ul {
+                padding: 20px 0 0 115px;
+            }
+        }
+
+        .customer-solutions-row {
+            margin-top: 100px;
+        }
+
         td {
             width: 20%;
             padding: 0 30px;
@@ -52,6 +77,15 @@
 
         .customers td {
             border-right-style: none;
+        }
+
+        td.title-bottom-border:after {
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            margin: 15px 0 30px;
+            width: 20%; /* Change this to whatever width you want. */
+            padding-top: 0; /* This creates some space between the element and the border. */
+            border-bottom: 1px solid @global-official-red; /* This creates the border. Replace black with whatever color you want. */
         }
 
         @media screen and (max-width : 768px) {
