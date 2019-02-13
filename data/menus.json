@@ -92,7 +92,7 @@
     "resources": false,
     "items": [{
         "text": "menu_product_multitenant",
-        "link": "product/multi-tenant"
+        "link": "product/"
     }, {
         "text": "menu_product_storage",
         "link": "product/storage"
